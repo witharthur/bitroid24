@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Создание сайта под ключ с SEO-продвижением: аналитика, разработка, структура, контент и запуск проекта с учетом поисковой оптимизации.">
+  <title>Создание сайта под ключ с SEO-продвижением</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Битроид",
+      "url": "https://example.com/",
+      "description": "Разработка сайтов под ключ с SEO-продвижением, аналитикой и последующей поддержкой.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Битроид"
+      }
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Битроид",
+      "url": "https://example.com/",
+      "logo": "https://example.com/images/logo-bitroid.png",
+      "telephone": "+7-495-414-28-08",
+      "email": "b24@bitroid.ru",
+      "sameAs": [
+        "https://vk.com/",
+        "https://t.me/",
+        "https://www.youtube.com/"
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+7-495-414-28-08",
+          "contactType": "sales",
+          "availableLanguage": [
+            "Russian"
+          ]
+        }
+      ]
+    }
+  </script>
+</head>
+<body>
+  <div class="site-shell">
+    <!-- Header -->
+    <header class="site-header" id="top">
+      <div class="container">
+        <div class="site-header__inner">
+          <a class="brand" href="#top" aria-label="Битроид">
+            <img class="brand__image" src="images/logo-bitroid.png" alt="Битроид IT company">
+          </a>
+
+          <nav class="site-header__nav" aria-label="Основная навигация">
+            <ul class="site-menu">
+              <li class="site-menu__item"><a class="site-menu__link site-menu__link--dropdown" href="#services">Услуги</a></li>
+              <li class="site-menu__item"><a class="site-menu__link site-menu__link--dropdown" href="#included">Продукты</a></li>
+              <li class="site-menu__item"><a class="site-menu__link site-menu__link--dropdown" href="#included">Готовые решения</a></li>
+              <li class="site-menu__item"><a class="site-menu__link site-menu__link--dropdown" href="#cases">Кейсы и проекты</a></li>
+              <li class="site-menu__item"><a class="site-menu__link site-menu__link--dropdown" href="#faq">О нас</a></li>
+            </ul>
+          </nav>
+
+          <div class="site-header__actions">
+            <a class="site-header__phone" href="tel:+74954142808">+7 (495) 414 28 08</a>
+
+            <button class="site-header__icon-button js-search-toggle" type="button" aria-label="Открыть поиск" aria-expanded="false" aria-controls="mobile-search">
+              <svg viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M8.75 3.75a5 5 0 1 0 0 10a5 5 0 0 0 0-10Zm0-2a7 7 0 1 1 0 14a7 7 0 0 1 0-14Zm9.66 15.24l-3.84-3.84l1.42-1.42l3.84 3.84l-1.42 1.42Z"></path>
+              </svg>
+            </button>
+
+            <a class="button button--primary site-header__cta" href="#contact">Обсудить проект</a>
+
+            <button class="site-header__burger js-burger-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="site-header-drawer">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="site-header__mobile-search" id="mobile-search">
+        <div class="container">
+          <form class="site-header__search-form site-header__search-form--mobile" action="#" method="get">
+            <label class="visually-hidden" for="mobile-search-field">Поиск по сайту</label>
+            <input class="site-header__search-input" id="mobile-search-field" type="search" name="q" placeholder="Поиск по сайту" autocomplete="off">
+            <button class="site-header__search-button" type="submit" aria-label="Найти">
+              <svg viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M8.75 3.75a5 5 0 1 0 0 10a5 5 0 0 0 0-10Zm0-2a7 7 0 1 1 0 14a7 7 0 0 1 0-14Zm9.66 15.24l-3.84-3.84l1.42-1.42l3.84 3.84l-1.42 1.42Z"></path>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="site-header__overlay"></div>
+
+      <div class="site-header__drawer" id="site-header-drawer">
+        <div class="site-header__drawer-inner">
+          <nav class="site-header__drawer-nav" aria-label="Мобильная навигация">
+            <ul class="site-header__drawer-menu">
+              <li><a href="#services">Услуги</a></li>
+              <li><a href="#included">Продукты</a></li>
+              <li><a href="#included">Готовые решения</a></li>
+              <li><a href="#cases">Кейсы</a></li>
+              <li><a href="#faq">FAQ</a></li>
+              <li><a href="#contact">Контакты</a></li>
+            </ul>
+          </nav>
+
+          <div class="site-header__drawer-bottom">
+            <a class="site-header__drawer-phone" href="tel:+74954142808">+7 (495) 414 28 08</a>
+            <a class="button button--primary button--full" href="#contact">Обсудить проект</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="site-main">
+      <!-- Breadcrumbs -->
+      <div class="breadcrumbs">
+        <div class="container">
+          <ol class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="#top">
+                <svg viewBox="0 0 16 16" aria-hidden="true">
+                  <path d="M8 2.5l5 4V13a1 1 0 0 1-1 1H9.5V10h-3v4H4a1 1 0 0 1-1-1V6.5l5-4Z"></path>
+                </svg>
+                Главная
+              </a>
+            </li>
+            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#services">Услуги</a></li>
+            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#hero">Создание сайтов</a></li>
+            <li class="breadcrumbs__item"><span>Сайт+SEO</span></li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Hero -->
+      <section class="hero section" id="hero">
+        <div class="container">
+          <div class="hero__grid">
+            <div class="hero__content">
+              <h1 class="hero__title">Создание сайта под ключ с SEO-продвижением</h1>
+              <p class="hero__description">
+                Разработка сайтов с учетом требований по SEO-продвижению и гарантией готовых позиций в поиске.
+                Создадим веб-проект, который максимально быстро занимает верные позиции в поисковиках.
+                Проводим оптимизацию перед запуском, чтобы вам не пришлось менять контент и мета-теги после старта.
+              </p>
+              <div class="hero__actions">
+                <a class="button button--primary" href="#contact">Заказать сайт</a>
+                <a class="text-link" href="#contact">
+                  Рассчитать стоимость
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M4 12h14"></path>
+                    <path d="m12 6 6 6-6 6"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="hero__visual">
+              <img src="images/main.png" alt="Website showcase" class="hero__image">
+            </div>
+          </div>
+          <div class="hero__ellipse hero__ellipse--1"></div>
+          <div class="hero__ellipse hero__ellipse--2"></div>
+        </div>
+      </section>
+
+      <!-- Audience -->
+      <section class="audience section" id="services">
+        <div class="container">
+          <div class="section-heading">
+            <h2 class="section-heading__title">Кому рекомендуем выбрать создание сайтов с SEO-раскруткой</h2>
+          </div>
+
+          <div class="audience__grid">
+            <article class="audience-card audience-card--shop">
+              <div class="audience-card__body">
+                <h3 class="audience-card__title">Интернет-магазин</h3>
+                <p class="audience-card__text">
+                  Создание и продвижение интернет-магазинов. Проектируем структуру фильтров под
+                  низкочастотные запросы. Выведем лучший URL для SEO-тегов.
+                </p>
+              </div>
+              <div class="audience-card__screen audience-card__screen--shop"></div>
+            </article>
+
+            <article class="audience-card audience-card--service">
+              <div class="audience-card__body">
+                <h3 class="audience-card__title">Сфера услуг</h3>
+                <p class="audience-card__text">
+                  Создание и продвижение продающих сайтов. Делаем специализированные сайты под SEO-запросы.
+                  Прорабатываем структуру под гео-запросы.
+                </p>
+              </div>
+              <div class="audience-card__screen audience-card__screen--service"></div>
+            </article>
+
+            <article class="audience-card audience-card--b2b">
+              <div class="audience-card__body">
+                <h3 class="audience-card__title">B2B-сайты</h3>
+                <p class="audience-card__text">
+                  Разработка и продвижение сайтов компаний, специализирующихся на предоставлении услуг
+                  корпоративному сегменту.
+                </p>
+              </div>
+              <div class="audience-card__screen audience-card__screen--b2b"></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Included -->
+      <section class="included section" id="included">
+        <div class="container">
+          <div class="section-heading section-heading--wide">
+            <h2 class="section-heading__title">Что входит в услугу по созданию сайта с продвижением в поисковых системах</h2>
+            <p class="section-heading__text">
+              Мы подходим к проекту комплексно: создание и оптимизация сайта идут параллельно, чтобы ваш
+              ресурс сразу после запуска был готов привлекать органический трафик. Все работы разделены на два
+              взаимосвязанных стека.
+            </p>
+          </div>
+
+          <div class="included__grid">
+            <article class="included-card">
+              <h3 class="included-card__title">Стек 1: Разработка</h3>
+              <p class="included-card__text">
+                Закладываем технический фундамент, от которого зависят скорость, стабильность и дальнейшая
+                масштабируемость ресурса. Оптимизация и разработка сайта для нас — это не просто код, а продуманная архитектура.
+              </p>
+
+              <div class="included-card__group">
+                <h4 class="included-card__subtitle">Бэкенд:</h4>
+                <ul class="included-card__list">
+                  <li>Проектируем структуру базы данных.</li>
+                  <li>Настраиваем серверную часть под высокие нагрузки.</li>
+                  <li>Реализуем гибкую систему управления контентом.</li>
+                </ul>
+              </div>
+
+              <div class="included-card__group">
+                <h4 class="included-card__subtitle">Верстка:</h4>
+                <ul class="included-card__list">
+                  <li>Верстаем сайт по стандартам HTML5/CSS3.</li>
+                  <li>Адаптируем интерфейс под любые устройства.</li>
+                  <li>Оптимизируем фронтенд-код для высокой скорости загрузки.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="included-card included-card--accent">
+              <h3 class="included-card__title">Стек 2: SEO-оптимизация</h3>
+              <p class="included-card__text">
+                Параллельно с разработкой мы проводим SEO-оптимизацию сайта под ключ, чтобы после запуска он сразу
+                начал собирать релевантный трафик.
+              </p>
+
+              <ul class="included-card__list included-card__list--dense">
+                <li>Собираем семантическое ядро и релевантные поисковые запросы.</li>
+                <li>Группируем запросы по смыслу и распределяем по страницам сайта.</li>
+                <li>Составляем robots.txt и закрываем служебные страницы.</li>
+                <li>Генерируем структуру XML-карты сайта.</li>
+                <li>Размечаем контент через Schema.org и Open Graph.</li>
+                <li>Настраиваем 301-редиректы и человеко-понятные URL.</li>
+                <li>Формируем внутреннюю перелинковку и канонические адреса.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cases -->
+      <section class="cases section" id="cases">
+        <div class="container">
+          <div class="cases__top">
+            <div class="section-heading section-heading--compact">
+              <h2 class="section-heading__title">Кейсы и проекты</h2>
+              <p class="section-heading__text">Помогаем бизнесам решать задачи максимально эффективно</p>
+            </div>
+            <a class="button button--outline cases__button" href="#contact">Смотреть все кейсы</a>
+          </div>
+
+          <div class="cases__slider-wrap">
+            <button class="cases__arrow cases__arrow--prev" type="button" aria-label="Предыдущий слайд"></button>
+
+            <div class="swiper cases-slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <article class="case-card case-card--light case-card--bg-1">
+                    <span class="case-card__label">Автоматизация</span>
+                    <h3 class="case-card__title">Автоматизация процессов для строительной компании</h3>
+                    <p class="case-card__text">Настроили CRM, сквозную аналитику и структуру посадочных страниц для лидогенерации.</p>
+                  </article>
+                </div>
+
+                <div class="swiper-slide">
+                  <article class="case-card case-card--green">
+                    <span class="case-card__label">Автоматизация услуг</span>
+                    <h3 class="case-card__title">Стройхолдинг</h3>
+                    <p class="case-card__text">Ускорили выполнение задач строительной компании на 20% и усилили цифровую воронку.</p>
+                    <a class="text-link text-link--light" href="#contact">
+                      Читать кейс
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M4 12h14"></path>
+                        <path d="m12 6 6 6-6 6"></path>
+                      </svg>
+                    </a>
+                  </article>
+                </div>
+
+                <div class="swiper-slide">
+                  <article class="case-card case-card--blue">
+                    <span class="case-card__label">Автоматизация</span>
+                    <h3 class="case-card__title">Автоматизация процессов для медицинского сервиса</h3>
+                    <p class="case-card__text">Разработали SEO-структуру, сервис записи и аналитические панели для отдела маркетинга.</p>
+                  </article>
+                </div>
+
+                <div class="swiper-slide">
+                  <article class="case-card case-card--white">
+                    <span class="case-card__label">B2B</span>
+                    <h3 class="case-card__title">Корпоративный сайт для производственной компании</h3>
+                    <p class="case-card__text">Объединили каталог, посадочные страницы и CRM-интеграцию в единую платформу.</p>
+                  </article>
+                </div>
+              </div>
+            </div>
+
+            <button class="cases__arrow cases__arrow--next" type="button" aria-label="Следующий слайд"></button>
+            <div class="cases__pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="faq section" id="faq">
+        <div class="container">
+          <div class="faq__panel">
+            <div class="faq__content">
+              <div class="faq__head">
+                <div class="section-heading section-heading--compact">
+                  <h2 class="section-heading__title">Часто задаваемые вопросы</h2>
+                  <p class="section-heading__text">Собрали ответы на самые частые вопросы наших клиентов</p>
+                </div>
+              </div>
+
+              <div class="faq-list">
+                <article class="faq-item is-active">
+                  <button class="faq-item__question" type="button" aria-expanded="true">
+                    <span>Чем SEO-сайт отличается от обычного?</span>
+                    <span class="faq-item__icon" aria-hidden="true"></span>
+                  </button>
+                  <div class="faq-item__answer">
+                    <p>
+                      SEO-сайт изначально проектируется с учетом требований поисковых систем: чистый код,
+                      продуманная иерархия страниц, оптимизированные мета-теги и высокая скорость загрузки.
+                      В отличие от обычного сайта, где оптимизацию часто добавляют постфактум, мы делаем SEO-фундамент
+                      уже на этапе разработки. Поэтому проект быстрее индексируется, лучше ранжируется и демонстрирует
+                      высокую конверсию после запуска.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="faq-item">
+                  <button class="faq-item__question" type="button" aria-expanded="false">
+                    <span>Нужно ли платить за ссылки?</span>
+                    <span class="faq-item__icon" aria-hidden="true"></span>
+                  </button>
+                  <div class="faq-item__answer">
+                    <p>
+                      На старте мы фокусируемся на технической оптимизации, структуре, контенте и внутренней перелинковке.
+                      Покупка ссылок рассматривается отдельно и только после анализа конкурентной среды и потенциала ниши.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="faq-item">
+                  <button class="faq-item__question" type="button" aria-expanded="false">
+                    <span>Что такое SEO-структура?</span>
+                    <span class="faq-item__icon" aria-hidden="true"></span>
+                  </button>
+                  <div class="faq-item__answer">
+                    <p>
+                      Это карта будущего сайта, где каждая страница создается под отдельную группу запросов.
+                      Такая структура помогает охватить больше поискового спроса и повысить релевантность каждой посадочной страницы.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="faq-item">
+                  <button class="faq-item__question" type="button" aria-expanded="false">
+                    <span>Сколько стоит создание и продвижение сайта?</span>
+                    <span class="faq-item__icon" aria-hidden="true"></span>
+                  </button>
+                  <div class="faq-item__answer">
+                    <p>
+                      Стоимость зависит от объема семантики, числа шаблонов, сложности интеграций и логики каталога.
+                      Мы формируем коммерческое предложение после короткого брифа и предварительного аудита ниши.
+                    </p>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <div class="faq__art">
+              <a class="text-link faq__link" href="#contact">
+                Читать все ответы на вопросы
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 12h14"></path>
+                  <path d="m12 6 6 6-6 6"></path>
+                </svg>
+              </a>
+              <img src="images/questions.png" alt="" class="faq__image" aria-hidden="true">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="contact section" id="contact">
+        <div class="container">
+          <div class="contact__panel">
+            <div class="contact__visual" aria-hidden="true">
+              <img src="images/laptop.png" alt="" class="contact__image">
+            </div>
+
+            <div class="contact__content">
+              <div class="section-heading section-heading--compact">
+                <h2 class="section-heading__title">Получите коммерческое предложение</h2>
+                <p class="section-heading__text">Закажите предварительный SEO-аудит вашей ниши и KPI на разработку</p>
+              </div>
+
+              <form class="contact-form" action="#" method="post">
+                <div class="contact-form__grid">
+                  <div class="contact-form__field">
+                    <label class="visually-hidden" for="contact-name">Ваше имя</label>
+                    <input class="contact-form__input" id="contact-name" type="text" name="name" placeholder="Ваше имя" autocomplete="name" required>
+                  </div>
+
+                  <div class="contact-form__field">
+                    <label class="visually-hidden" for="contact-phone">Телефон</label>
+                    <input class="contact-form__input" id="contact-phone" type="tel" name="phone" placeholder="+7 (999) 999-00-00" autocomplete="tel" required>
+                  </div>
+
+                  <div class="contact-form__field contact-form__field--full">
+                    <label class="visually-hidden" for="contact-site">Ссылка на сайт</label>
+                    <input class="contact-form__input" id="contact-site" type="url" name="site" placeholder="Ссылка на сайт" autocomplete="url">
+                  </div>
+                </div>
+
+                <button class="button button--primary" type="submit">Получить консультацию</button>
+
+                <label class="contact-form__agree">
+                  <input class="contact-form__checkbox" type="checkbox" name="agree" checked>
+                  <span>Нажимая на кнопку «Отправить», вы соглашаетесь с Правилами обработки персональных данных и Политикой конфиденциальности.</span>
+                </label>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Platform CTA -->
+      <section class="platform section">
+        <div class="container">
+          <div class="platform__grid">
+            <div class="platform__content">
+              <h2 class="platform__title">Единая платформа — максимум эффективности</h2>
+              <p class="platform__text">Забудьте о множестве разрозненных сервисов и приложений.</p>
+            </div>
+
+            <div class="platform__action">
+              <a class="button button--primary" href="#contact">Получить консультацию</a>
+              <div class="platform__art" aria-hidden="true">
+                <img src="images/logotp.png" alt="" class="platform__graphic">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" id="contacts">
+      <div class="container">
+        <div class="site-footer__top">
+          <div class="site-footer__info">
+            <a class="brand" href="#top" aria-label="Битроид">
+              <img class="brand__image" src="images/logo-bitroid.png" alt="Битроид IT company">
+            </a>
+
+            <div class="site-footer__contacts">
+              <a href="tel:+74954142808">+7 (495) 414 28 08</a>
+              <a href="mailto:b24@bitroid.ru">b24@bitroid.ru</a>
+              <p>428038, Чувашская республика, г. Чебоксары, ул. Мате Залка, д. 10, офис 1</p>
+            </div>
+
+            <div class="socials" aria-label="Социальные сети">
+              <a class="socials__link socials__link--vk" href="https://vk.com/" target="_blank" rel="noopener noreferrer">
+                <img src="images/vk.svg" alt="VK">
+              </a>
+              <a class="socials__link socials__link--tg" href="https://t.me/" target="_blank" rel="noopener noreferrer">
+                <img src="images/tg.svg" alt="Telegram">
+              </a>
+              <a class="socials__link socials__link--yt" href="https://youtube.com/" target="_blank" rel="noopener noreferrer">
+                <img src="images/yt.svg" alt="YouTube">
+              </a>
+            </div>
+          </div>
+
+          <div class="site-footer__nav">
+            <div class="site-footer__column">
+              <h3 class="site-footer__title">О компании</h3>
+              <ul class="site-footer__list">
+                <li><a href="#top">Контакты</a></li>
+                <li><a href="#hero">Отзывы</a></li>
+                <li><a href="#cases">Новости</a></li>
+                <li><a href="#faq">Статьи</a></li>
+                <li><a href="#contact">Акции</a></li>
+                <li><a href="#faq">Вопрос-ответ</a></li>
+                <li><a href="#contact">Оплата</a></li>
+              </ul>
+            </div>
+
+            <div class="site-footer__column">
+              <h3 class="site-footer__title">Внедрение CRM</h3>
+              <ul class="site-footer__list">
+                <li><a href="#hero">Создание сайта</a></li>
+                <li><a href="#included">Перенос сайта</a></li>
+                <li><a href="#included">Поддержка сайтов</a></li>
+                <li><a href="#included">Решения для государственных организаций</a></li>
+                <li><a href="#included">Обучение</a></li>
+                <li><a href="#included">Автоматизация</a></li>
+                <li><a href="#included">Интеграция и настройка</a></li>
+              </ul>
+            </div>
+
+            <div class="site-footer__column">
+              <div class="site-footer__group">
+                <h3 class="site-footer__title">1С Битрикс лицензии</h3>
+                <ul class="site-footer__list">
+                  <li><a href="#services">Продление лицензий</a></li>
+                </ul>
+              </div>
+              <div class="site-footer__group" style="margin-top: 32px;">
+                <h3 class="site-footer__title">Для партнеров</h3>
+                <ul class="site-footer__list">
+                  <li><a href="#contact">Вакансии</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="site-footer__column">
+              <h3 class="site-footer__title">ОКВЭД</h3>
+              <ul class="site-footer__list">
+                <li><a href="#services">дополнительная инфа</a></li>
+                <li><a href="#services">как в реестре</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="site-footer__bottom">
+          <p>2026©Bitroid Все права защищены</p>
+          <div class="site-footer__legal">
+            <a href="#contact">Политика конфиденциальности</a>
+            <a href="#contact">Пользовательское соглашение</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__ellipse footer__ellipse--1"></div>
+      <div class="footer__ellipse footer__ellipse--2"></div>
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

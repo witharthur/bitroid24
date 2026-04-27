@@ -1,0 +1,74 @@
+<!-- Header component -->
+<header class="site-header" id="top">
+  <div class="container">
+    <div class="site-header__inner">
+      <a class="brand" href="#top" aria-label="Битроид">
+        <img class="brand__image" src="../images/logo-bitroid.png" alt="Битроид IT company">
+      </a>
+
+      <nav class="site-header__nav" aria-label="Основная навигация">
+        <ul class="site-menu">
+          <li class="site-menu__item"><a class="site-menu__link site-menu__link--dropdown" href="#services">Услуги</a></li>
+          <li class="site-menu__item"><a class="site-menu__link site-menu__link--dropdown" href="#included">Продукты</a></li>
+          <li class="site-menu__item"><a class="site-menu__link site-menu__link--dropdown" href="#included">Готовые решения</a></li>
+          <li class="site-menu__item"><a class="site-menu__link site-menu__link--dropdown" href="#cases">Кейсы и проекты</a></li>
+          <li class="site-menu__item"><a class="site-menu__link site-menu__link--dropdown" href="#faq">О нас</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__actions">
+        <a class="site-header__phone" href="tel:+74954142808">+7 (495) 414 28 08</a>
+
+        <button class="site-header__icon-button js-search-toggle" type="button" aria-label="Открыть поиск" aria-expanded="false" aria-controls="mobile-search">
+          <svg viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M8.75 3.75a5 5 0 1 0 0 10a5 5 0 0 0 0-10Zm0-2a7 7 0 1 1 0 14a7 7 0 0 1 0-14Zm9.66 15.24l-3.84-3.84l1.42-1.42l3.84 3.84l-1.42 1.42Z"></path>
+          </svg>
+        </button>
+
+        <a class="button button--primary site-header__cta" href="#contact">Обсудить проект</a>
+
+        <button class="site-header__burger js-burger-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="site-header-drawer">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="site-header__mobile-search" id="mobile-search">
+    <div class="container">
+      <form class="site-header__search-form site-header__search-form--mobile" action="#" method="get">
+        <label class="visually-hidden" for="component-mobile-search">Поиск по сайту</label>
+        <input class="site-header__search-input" id="component-mobile-search" type="search" name="q" placeholder="Поиск по сайту" autocomplete="off">
+        <button class="site-header__search-button" type="submit" aria-label="Найти">
+          <svg viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M8.75 3.75a5 5 0 1 0 0 10a5 5 0 0 0 0-10Zm0-2a7 7 0 1 1 0 14a7 7 0 0 1 0-14Zm9.66 15.24l-3.84-3.84l1.42-1.42l3.84 3.84l-1.42 1.42Z"></path>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="site-header__overlay"></div>
+
+  <div class="site-header__drawer" id="site-header-drawer">
+    <div class="site-header__drawer-inner">
+      <nav class="site-header__drawer-nav" aria-label="Мобильная навигация">
+        <ul class="site-header__drawer-menu">
+          <li><a href="#services">Услуги</a></li>
+          <li><a href="#included">Продукты</a></li>
+          <li><a href="#included">Готовые решения</a></li>
+          <li><a href="#cases">Кейсы</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__drawer-bottom">
+        <a class="site-header__drawer-phone" href="tel:+74954142808">+7 (495) 414 28 08</a>
+        <a class="button button--primary button--full" href="#contact">Обсудить проект</a>
+      </div>
+    </div>
+  </div>
+</header>
