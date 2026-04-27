@@ -117,6 +117,10 @@ h4 {
 .section {
   position: relative;
   padding: 84px 0;
+  margin-top: -1px;
+  background-clip: padding-box;
+  outline: 1px solid transparent;
+  backface-visibility: hidden;
 }
 
 .visually-hidden {
@@ -261,6 +265,7 @@ h4 {
   background: rgba(255, 255, 255, 0.97);
   -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
+  background-clip: padding-box;
 }
 
 .site-header__inner {
@@ -565,7 +570,7 @@ h4 {
 .hero {
   position: relative;
   padding-top: 44px;
-  padding-bottom: 92px;
+  padding-bottom: 242px;
 }
 
 .hero__grid {
@@ -599,24 +604,17 @@ h4 {
   margin-top: 34px;
 }
 
-.hero__visual {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.glass-figure {
+.hero__content {
   position: relative;
-  width: min(100%, 540px);
-  aspect-ratio: 1 / 0.9;
+  z-index: 10;
 }
 
 .hero__ellipse {
   position: absolute;
   border-radius: 50%;
-  z-index: 0;
+  z-index: -1;
   pointer-events: none;
-  mix-blend-mode: screen;
-  opacity: 0.3;
+  opacity: 1;
 }
 
 .hero__ellipse--1 {
@@ -624,8 +622,6 @@ h4 {
   height: 300px;
   top: 473px;
   left: 440px;
-  opacity: 1;
-  transform: rotate(0deg);
   background: rgba(37, 135, 249, 1);
   filter: blur(150px);
 }
@@ -635,10 +631,13 @@ h4 {
   height: 300px;
   top: 273px;
   left: 105px;
-  opacity: 1;
-  transform: rotate(0deg);
   background: rgba(43, 172, 104, 1);
   filter: blur(150px);
+}
+
+.hero__visual {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .glass-figure__panel {
@@ -712,13 +711,21 @@ h4 {
 }
 
 /* Audience */
+.audience {
+  position: relative;
+  padding-top: 40px;
+}
+
 .audience__grid {
+  position: relative;
+  z-index: 2;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
 }
 
 .audience-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 18px;
@@ -728,6 +735,66 @@ h4 {
   border-radius: 28px;
   background: rgba(255, 255, 255, 0.92);
   box-shadow: var(--color-shadow);
+  overflow: hidden;
+}
+
+.audience__ellipse {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
+  filter: blur(150px);
+}
+
+.audience__ellipse--1 {
+  background: rgba(37, 135, 249, 1);
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+}
+
+.audience__ellipse--2 {
+  background: rgba(43, 172, 104, 1);
+  top: 45%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
+
+.audience-card__body,
+.audience-card__screen {
+  position: relative;
+  z-index: 2;
+}
+
+.audience-blob {
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.audience-card--shop .audience-blob {
+  background: rgba(37, 135, 249, 0.3);
+  bottom: -80px;
+  right: -60px;
+}
+
+.audience-card--service .audience-blob {
+  background: rgba(43, 172, 104, 0.3);
+  bottom: -80px;
+  left: -60px;
+}
+
+.audience-card--b2b .audience-blob {
+  background: rgba(37, 135, 249, 0.3);
+  top: -80px;
+  right: -60px;
 }
 
 .audience-card__title {
@@ -743,7 +810,6 @@ h4 {
 }
 
 .audience-card__screen {
-  position: relative;
   min-height: 190px;
   margin-top: auto;
   border-radius: 22px;
@@ -1381,6 +1447,8 @@ h4 {
   padding: 60px 0 30px;
   background: #ffffff;
   overflow: hidden;
+  margin-top: -1px;
+  background-clip: padding-box;
 }
 
 .footer__ellipse {
