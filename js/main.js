@@ -121,7 +121,7 @@
             slidesPerView: 2,
             spaceBetween: 18
           },
-          768: {
+          992: {
             slidesPerView: 3,
             spaceBetween: 20,
             centeredSlides: true,
