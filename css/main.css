@@ -597,6 +597,8 @@ h4 {
 }
 
 .hero__actions {
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -943,11 +945,7 @@ h4 {
 
 /* Cases */
 .cases {
-  overflow: hidden;
   padding: 70px 0 78px;
-  background:
-    linear-gradient(180deg, #ffffff 0 155px, rgba(255, 255, 255, 0) 155px),
-    linear-gradient(105deg, rgba(238, 255, 246, 0.96) 0%, rgba(220, 248, 237, 0.94) 24%, rgba(159, 207, 255, 0.9) 56%, rgba(238, 247, 255, 0.92) 74%, #ffffff 100%);
 }
 
 .cases__top {
@@ -1038,12 +1036,12 @@ h4 {
 
 .case-card::before {
   content: "";
- position: absolute;
-   top: 11px;
-    right: -54px;
-    width: 331px;
-    height: 279px;
-background: linear-gradient(98.54deg, #34AE6B 3.22%, #2587F9 86.86%);
+  position: absolute;
+  top: 11px;
+  right: -54px;
+  width: 331px;
+  height: 279px;
+  background: linear-gradient(98.54deg, #34AE6B 3.22%, #2587F9 86.86%);
   -webkit-mask: url("../images/case\ 1.png") center / contain no-repeat;
   mask: url("../images/case\ 1.png ") center / contain no-repeat;
   opacity: 0.82;
@@ -1062,15 +1060,15 @@ background: linear-gradient(98.54deg, #34AE6B 3.22%, #2587F9 86.86%);
 }
 
 .swiper-slide-next .case-card::before {
-    right: auto;
-    left: -51px;
-    top: -4px;
-    width: 254px;
-    height: 261px;
-    transform: rotate(-90deg) scaleY(-1);
-    background: linear-gradient(98.54deg, #34AE6B 3.22%, #2587F9 86.86%);
-    -webkit-mask: url("../images/case 1.png") center / contain no-repeat;
-    mask: url("../images/case 1.png") center / contain no-repeat;
+  right: auto;
+  left: -51px;
+  top: -4px;
+  width: 254px;
+  height: 261px;
+  transform: rotate(-90deg) scaleY(-1);
+  background: linear-gradient(98.54deg, #34AE6B 3.22%, #2587F9 86.86%);
+  -webkit-mask: url("../images/case 1.png") center / contain no-repeat;
+  mask: url("../images/case 1.png") center / contain no-repeat;
 
 }
 
@@ -1082,19 +1080,19 @@ background: linear-gradient(98.54deg, #34AE6B 3.22%, #2587F9 86.86%);
 }
 
 .swiper-slide-active .case-card::before {
-      content: "";
-    position: absolute;
-    top: -9px;
-    right: -39px;
-    width: 295px;
-    height: 260px;
-    background: linear-gradient(96deg, rgba(126, 255, 225, 0.56) 4%, rgba(84, 218, 255, 0.54) 48%, rgba(61, 141, 255, 0.42) 100%);
-    -webkit-mask: url(../images/case\ 1.png ) center / contain no-repeat;
-    mask: url(../images/case\ 1.png ) center / contain no-repeat;
-    opacity: 0.82;
-    pointer-events: none;
-    z-index: 1;
-    transition: transform 0.6s ease;
+  content: "";
+  position: absolute;
+  top: -9px;
+  right: -39px;
+  width: 295px;
+  height: 260px;
+  background: linear-gradient(96deg, rgba(126, 255, 225, 0.56) 4%, rgba(84, 218, 255, 0.54) 48%, rgba(61, 141, 255, 0.42) 100%);
+  -webkit-mask: url(../images/case\ 1.png ) center / contain no-repeat;
+  mask: url(../images/case\ 1.png ) center / contain no-repeat;
+  opacity: 0.82;
+  pointer-events: none;
+  z-index: 1;
+  transition: transform 0.6s ease;
 }
 
 .swiper-slide-active .case-card::after {
@@ -1255,6 +1253,30 @@ background: linear-gradient(98.54deg, #34AE6B 3.22%, #2587F9 86.86%);
 .cases__pagination .swiper-pagination-bullet-active {
   width: 7px;
   background: var(--color-primary);
+}
+
+.cases__ellipse {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
+  filter: blur(150px);
+}
+
+.cases__ellipse--1 {
+  background: rgba(37, 135, 249, 1);
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+}
+
+.cases__ellipse--2 {
+  background: rgba(43, 172, 104, 1);
+  top: 45%;
+  left: 70%;
+  transform: translate(-50%, -50%);
 }
 
 /* FAQ */
